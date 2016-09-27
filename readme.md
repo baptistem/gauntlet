@@ -1,7 +1,7 @@
 Gauntlet is a CLI password manager oriented multi-user.
 The goal is to provide a solution for password in enterprise context.
 
-_ require : gnugp_
+_require : gnugp_
 
 # curent version
 v0.0 draft
