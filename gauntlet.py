@@ -17,7 +17,7 @@ def load_JSON(JSON_content):
     crypted_id_data=json.load(JSON_content)
     passphrase=getpass("passphrase?")
     for key in crypted_id_data:
-        k.data[decrypt(key,passphrase)]=crypted_id_data[key]
+        k.data[decrypt(key,passphrase=passphrase)]=crypted_id_data[key]
 
 def update_file(path):
     crypted_data={}
@@ -37,8 +37,9 @@ def get_password(key):
         return
     return k.data[key]
     
-def decrypt(encrypted):
-    passphrase = getpass("passphrase? ")
+def decrypt(encrypted,passphrase=None):
+    if passphrase is None:
+        passphrase = getpass("passphrase? ")
     return str(gpg.decrypt(str(encrypted),passphrase=str(passphrase)))
 
 def encrypt(clear):
