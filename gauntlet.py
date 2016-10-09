@@ -3,10 +3,19 @@ class Keyring:
     ownerfingerprint=''
 from getpass import getpass
 import sys
-import gnupg
+try:
+    import gnupg
+except ImportError:
+    print("missing gnupg")
+    sys.exit(-1)
 import json
+try:
+        from Tkinter import Tk
+except ImportError:
+        from tkinter import Tk
 
-
+t=Tk()
+t.withdraw()
 gpg = gnupg.GPG()
 gpg.encoding= 'UTF-8'
 
@@ -91,7 +100,9 @@ def shell():
     elif choice is 3:
         print("type the id of your key")
         key_id=input()
-        print(decrypt(get_password(key_id)))
+        t.clipboard_clear()
+        t.clipboard_append(decrypt(get_password(key_id)))
+        t.after(10000,t.clipboard_clear)
     elif choice is 4:
         print("type the id to update")
         id_to_update=input("id : ")

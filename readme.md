@@ -1,7 +1,7 @@
 Gauntlet is a CLI password manager oriented multi-user.
 The goal is to provide a solution for password in enterprise context.
 
-_require : gnugp_
+_require : python3, gnugp, tk_
 
 # usage
 python3 gauntlet.py -s
