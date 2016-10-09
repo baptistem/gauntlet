@@ -3,14 +3,22 @@ The goal is to provide a solution for password in enterprise context.
 
 _require : gnugp_
 
-# curent version
-v0.0 draft
-* bases method
+# usage
+python3 gauntlet.py -s
+you need to first to select the key with the option 1
+otherwise everything else might fail
 
+
+# curent version
+v0.1 PoC
+* **this version is not fail safe**
+* bases method
+* CLI usable
+* encryption for password and id
+* add a password to clipboard for 10 sec
 
 # coming next:
 V0.1 Single User release
-* create GPG key
 * encrypt password using own GPG key
 * decrypt password using own GPG key
 * add to clipboard for 10 secs
