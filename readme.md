@@ -10,12 +10,8 @@ otherwise everything else might fail
 
 
 # curent version
-v0.1 PoC
-* **this version is not fail safe**
-* bases method
-* CLI usable
-* encryption for password and id
-* add a password to clipboard for 10 sec
+v0.1.1
+* failsafe
 
 # coming next:
 V0.1 Single User release
